@@ -1,6 +1,7 @@
 ﻿using System;
 namespace Task3.Solution
 {
+    /*
     public sealed class StockEventArgs : EventArgs
     {
         public int USD { get; set; }
@@ -75,4 +76,5 @@ namespace Task3.Solution
             information.NewStock -= BankStock;
         }
     }
+    */
 }
