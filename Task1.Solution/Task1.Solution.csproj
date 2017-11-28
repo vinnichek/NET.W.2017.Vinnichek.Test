@@ -44,7 +44,13 @@
     <Compile Include="IRepository.cs" />
     <Compile Include="SqlRepository.cs" />
     <Compile Include="PasswordCheckerService.cs" />
-    <Compile Include="ValidatePassword.cs" />
+    <Compile Include="NullPassRule.cs" />
+    <Compile Include="IRules.cs" />
+    <Compile Include="ShortPassRule.cs" />
+    <Compile Include="EmptyPassRule.cs" />
+    <Compile Include="LongPassRule.cs" />
+    <Compile Include="HasLetterPassRule.cs" />
+    <Compile Include="HasNumberPassRule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

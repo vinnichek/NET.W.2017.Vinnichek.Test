@@ -12,7 +12,12 @@ namespace Task1.Console
         static void Main(string[] args)
         {
             var rep = new SqlRepository();
-            System.Console.WriteLine(PasswordCheckerService.VerifyPassword("fhjfkjh3", rep));
+            string s = "23";
+            List<IRules> a = new List<IRules>();
+            a.Add(new ShortPassRule());
+            a.Add(new NullPassRule());
+            a.Add(new HasLetterPassRule());
+            System.Console.WriteLine(PasswordCheckerService.VerifyPassword(s, rep, a));
         }
     }
 }
