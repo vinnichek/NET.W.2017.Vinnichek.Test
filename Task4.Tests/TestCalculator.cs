@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using Task4;
+using Task4.Solution;
 
 namespace Task4.Tests
 {
@@ -14,10 +15,10 @@ namespace Task4.Tests
         public void Test_AverageByMean()
         {
             Calculator calculator = new Calculator();
-
+            var a = new MeanAveragingPredicate();
             double expected = 8.3636363;
 
-            double actual = calculator.CalculateAverage(values, AveragingMethod.Mean);
+            double actual = calculator.CalculateAverage(values, a);
 
             Assert.AreEqual(expected, actual, 0.000001);
         }
@@ -26,10 +27,11 @@ namespace Task4.Tests
         public void Test_AverageByMedian()
         {
             Calculator calculator = new Calculator();
+            var a = new MedianAveragingPredicate();
 
             double expected = 8.0;
 
-            double actual = calculator.CalculateAverage(values, AveragingMethod.Median);
+            double actual = calculator.CalculateAverage(values, a);
 
             Assert.AreEqual(expected, actual, 0.000001);
         }
