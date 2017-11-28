@@ -3,25 +3,19 @@ namespace Task5.Solution
 {
     public class LaTeXConverter : IConverter
     {
-        public string Convert(DocumentPart part)
+        public string ConvertBoldText(string text)
         {
-            if (part.GetType() == typeof(BoldText))
-            {
-                var text = (BoldText)part;
-                return "\\textbf{" + text.Text + "}";
-            }
+            return "\\textbf{" + text + "}";
+        }
 
-            if (part.GetType() == typeof(Hyperlink))
-            {
-                var text = (Hyperlink)part;
-                return "\\href{" + text.Url + "}{" + text.Text + "}";
-            }
+        public string ConvertHyperlink(string text, string url)
+        {
+            return "\\href{" + url + "}{" + text + "}";
+        }
 
-            if (part.GetType() == typeof(PlainText))
-            {
-                var text = (PlainText)part;
-                return text.Text;
-            }
+        public string ConvertPlainText(string text)
+        {
+            return text;
         }
     }
 }

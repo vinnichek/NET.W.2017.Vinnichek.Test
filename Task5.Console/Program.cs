@@ -3,11 +3,16 @@
     using System.Collections.Generic;
     using System;
     using Task5;
+    using Task5.Solution;
 
     class Program
     {
         static void Main(string[] args)
         {
+            var htmlConverter = new HtmlConverter();
+            var laTeXConverter = new LaTeXConverter();
+            var plainTextConverter = new PlainTextConverter();
+
             List<DocumentPart> parts = new List<DocumentPart>
                 {
                     new PlainText {Text = "Some plain text"},
@@ -17,11 +22,9 @@
 
             Document document = new Document(parts);
 
-            Console.WriteLine(document.ToHtml());
-
-            Console.WriteLine(document.ToPlainText());
-
-            Console.WriteLine(document.ToLaTeX());
+            Console.WriteLine(document.Convert(htmlConverter));
+            Console.WriteLine(document.Convert(plainTextConverter));
+            Console.WriteLine(document.Convert(laTeXConverter));
         }
     }
 }

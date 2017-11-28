@@ -7,8 +7,22 @@ namespace Task5.Solution
     {
         private List<DocumentPart> parts;
 
-        public Convert(IConverter converter)
+        public Document(IEnumerable<DocumentPart> parts)
         {
+            this.parts = new List<DocumentPart>(parts);
         }
+
+        public string Convert(IConverter converter)
+        {
+            string str = " ";
+
+            foreach (var part in parts)
+            {
+                str += $"{part.Convert(converter)}\n";
+            }
+
+            return str;
+        }
+
     }
 }
