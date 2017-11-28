@@ -8,21 +8,17 @@ namespace Task1.Solution
     {
         public static Tuple<bool, string> VerifyPassword(string password, IRepository repository, List<IRules> rules)
         {
-            try
+            foreach (var item in rules)
             {
-                foreach (var item in rules)
+                var flag = item.Validate(password);
+                if (!flag.Item1)
                 {
-                    item.Validate(password);
+                    return flag;
                 }
             }
 
-            catch(ArgumentException e)
-            {
-                return Tuple.Create(false, e.Message);
-            }
-
             repository.Create(password);
-            return Tuple.Create(true, "Password is Ok. User was created");
-        }
+            return Tuple.Create(true, "Password is Ok. User was created"); 
+         }
     }
 }

@@ -3,10 +3,12 @@ namespace Task1.Solution
 {
     public class LongPassRule : IRules
     {
-        public void Validate(string password)
+        public Tuple<bool, string> Validate(string password)
         {
             if (password.Length >= 15)
-                throw new ArgumentException($"{password} length too long");
+                return Tuple.Create(false, $"{password} length too long");
+            else
+                return Tuple.Create(true, "Password is Ok. User was created");
         }
     }
 }

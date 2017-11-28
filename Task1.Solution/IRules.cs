@@ -3,6 +3,6 @@ namespace Task1.Solution
 {
     public interface IRules
     {
-        void Validate(string password);
+        Tuple<bool, string> Validate(string password); 
     }
 }

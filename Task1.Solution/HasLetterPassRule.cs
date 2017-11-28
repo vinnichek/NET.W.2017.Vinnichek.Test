@@ -5,10 +5,12 @@ namespace Task1.Solution
 {
     public class HasLetterPassRule : IRules
     {
-        public void Validate(string password)
+        public Tuple<bool, string> Validate(string password)
         {
             if (!password.Any(char.IsLetter))
-                throw new ArgumentException($"{password} hasn't alphanumerical chars");
+                return Tuple.Create(false, $"{password} hasn't alphanumerical chars");
+            else
+                return Tuple.Create(true, "Password is Ok. User was created");
         }
     }
 }

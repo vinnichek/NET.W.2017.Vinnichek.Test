@@ -3,10 +3,12 @@ namespace Task1.Solution
 {
     public class ShortPassRule : IRules
     {
-        public void Validate(string password)
+        public Tuple<bool, string> Validate(string password)
         {
             if (password.Length <= 7)
-                throw new ArgumentException($"{password} length too short");
+                return Tuple.Create(false, $"{password} length too short");
+            else
+                return Tuple.Create(true, "Password is Ok. User was created");
         }
     }
 }

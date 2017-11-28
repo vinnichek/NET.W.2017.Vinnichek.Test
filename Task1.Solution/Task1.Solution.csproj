@@ -49,8 +49,8 @@
     <Compile Include="ShortPassRule.cs" />
     <Compile Include="EmptyPassRule.cs" />
     <Compile Include="LongPassRule.cs" />
-    <Compile Include="HasLetterPassRule.cs" />
     <Compile Include="HasNumberPassRule.cs" />
+    <Compile Include="HasLetterPassRule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
