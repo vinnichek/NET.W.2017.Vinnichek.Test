@@ -1,0 +1,9 @@
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/bin/Debug/Task1.Console.exe.config
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/bin/Debug/Task1.Console.exe
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/bin/Debug/Task1.Console.pdb
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/obj/Debug/Task1.Console.csproj.CoreCompileInputs.cache
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/obj/Debug/Task1.Console.exe
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/obj/Debug/Task1.Console.pdb
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/bin/Debug/Task1.Solution.dll
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/bin/Debug/Task1.Solution.pdb
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Console/obj/Debug/Task1.Console.csprojResolveAssemblyReference.cache
