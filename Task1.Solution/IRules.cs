@@ -1,8 +1,8 @@
 ﻿using System;
 namespace Task1.Solution
 {
-    public interface IRules
+    public interface IRule
     {
-        void Validate(string password);
+        Tuple<bool, string> Validate(string password);
     }
 }
