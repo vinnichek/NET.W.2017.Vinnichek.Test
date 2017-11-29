@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Moq;
 using NUnit.Framework;
 
 namespace Task1.Solution.Tests
@@ -10,46 +11,33 @@ namespace Task1.Solution.Tests
         IRepository rep = new SqlRepository();
         List<IRules> rules = new List<IRules>();
 
-        [Test]
-        public void Test_Valid_Password()
+        [TestCase("12345678a", ExpectedResult = "(True, Password is Ok. User was created)")]
+        [TestCase("12345678", ExpectedResult = "(False, 12345678 hasn't alphanumerical chars)")]
+        [TestCase("qwertyui", ExpectedResult = "(False, qwertyui hasn't digits)")]
+        [TestCase("qwer", ExpectedResult = "(False, qwer length too short)")]
+        public string Test_Verify_Password(string password)
         {
             rules.Add(new ShortPassRule());
-            rules.Add(new NullPassRule());
+            rules.Add(new HasNumberPassRule());
             rules.Add(new HasLetterPassRule());
 
-            string actual = PasswordCheckerService.VerifyPassword("23265248g", rep, rules).ToString();
-
-            string expected = "(True, Password is Ok. User was created)";
-
-            Assert.AreEqual(expected, actual);
+            return PasswordCheckerService.VerifyPassword(password, rep, rules).ToString();;
         }
 
-        [Test]
-        public void Test_Has_Letter_Rule_Password()
+        [TestCase("12345678a")]
+        [TestCase("qwerty123")]
+        public void Mock_Test_Repository(string password)
         {
             rules.Add(new ShortPassRule());
             rules.Add(new NullPassRule());
             rules.Add(new HasLetterPassRule());
 
-            string actual = PasswordCheckerService.VerifyPassword("23265248", rep, rules).ToString();
+            var repositoryMock = new Mock<IRepository>();
 
-            string expected = "(False, 23265248 hasn't alphanumerical chars)";
+            PasswordCheckerService.VerifyPassword(password, repositoryMock.Object, rules).ToString();
 
-            Assert.AreEqual(expected, actual);
-        }
-
-        [Test]
-        public void Test_Short_Rule_Password()
-        {
-            rules.Add(new ShortPassRule());
-            rules.Add(new NullPassRule());
-            rules.Add(new HasLetterPassRule());
-
-            string actual = PasswordCheckerService.VerifyPassword("23", rep, rules).ToString();
-
-            string expected = "(False, 23 length too short)";
-
-            Assert.AreEqual(expected, actual);
+            repositoryMock.Verify(repository => 
+                                  repository.Create(It.Is<string>(str => string.Equals(str, password, StringComparison.Ordinal))), Times.AtMostOnce());
         }
     }
 }

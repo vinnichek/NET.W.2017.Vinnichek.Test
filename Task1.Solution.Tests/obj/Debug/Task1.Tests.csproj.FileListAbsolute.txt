@@ -15,8 +15,6 @@ C:/Users/MIB/Desktop/23.11.2017/Task1.Solution.Tests/obj/Debug/Task1.Tests.cspro
 C:/Users/MIB/Desktop/23.11.2017/Task1.Solution.Tests/obj/Debug/Task1.Tests.csproj.CoreCompileInputs.cache
 C:/Users/MIB/Desktop/23.11.2017/Task1.Solution.Tests/obj/Debug/Task1.Solution.Tests.dll
 C:/Users/MIB/Desktop/23.11.2017/Task1.Solution.Tests/obj/Debug/Task1.Solution.Tests.pdb
-/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/obj/Debug/Task1.Tests.csprojResolveAssemblyReference.cache
-/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/obj/Debug/Task1.Tests.csproj.CoreCompileInputs.cache
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/bin/Debug/Task1.Solution.Tests.dll
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/bin/Debug/Task1.Solution.Tests.pdb
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/bin/Debug/Castle.Core.dll
@@ -28,5 +26,7 @@ C:/Users/MIB/Desktop/23.11.2017/Task1.Solution.Tests/obj/Debug/Task1.Solution.Te
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/bin/Debug/Moq.pdb
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/bin/Debug/Moq.xml
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/bin/Debug/nunit.framework.xml
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/obj/Debug/Task1.Tests.csprojResolveAssemblyReference.cache
+/Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/obj/Debug/Task1.Tests.csproj.CoreCompileInputs.cache
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/obj/Debug/Task1.Solution.Tests.dll
 /Users/vinnichek/Documents/NET.W.2017.Vinnichek.Test/Task1.Solution.Tests/obj/Debug/Task1.Solution.Tests.pdb
